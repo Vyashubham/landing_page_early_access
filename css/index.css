@@ -63,12 +63,12 @@ main {
   border-radius: 0 !important; }
 
 .features-container {
-  height: 80vh;
+  height: 110vh;
   width: 90vw;
   margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(2, 0.2fr) repeat(2, 1fr);
+  grid-template-rows: repeat(2, 0.15fr) repeat(2, 1fr);
   grid-column-gap: 0px;
   grid-row-gap: 0px;
   color: #fff; }
@@ -89,12 +89,53 @@ main {
   font-size: 1.5rem; }
 
 .feature-list {
-  background-color: aqua;
-  grid-area: 3 / 1 / 5 / 3; }
+  grid-area: 3 / 1 / 5 / 3;
+  padding-left: 5vw;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 2vh; }
+
+.main-hook {
+  width: 70%;
+  font-size: 2rem;
+  font-weight: 700; }
+
+.sub-hook {
+  width: 70%;
+  font-size: 1.5rem; }
+
+.one-liner {
+  width: 70%;
+  font-size: 1.5rem; }
+
+.pain-point-list > ul {
+  --icon-space: 1.3em;
+  list-style: none;
+  padding: 0; }
+
+li {
+  padding-left: var(--icon-space);
+  line-height: 3vh !important;
+  letter-spacing: .15rem;
+  font-family: Montserrat; }
+
+li:before {
+  content: "\f00c";
+  /* FontAwesome Unicode */
+  font-family: FontAwesome;
+  display: inline-block;
+  margin-left: calc( var(--icon-space) * -1 );
+  width: var(--icon-space);
+  color: green; }
 
 .feature-image {
-  background-color: bisque;
-  grid-area: 3 / 3 / 5 / 5; }
+  grid-area: 3 / 3 / 5 / 5;
+  background-image: url("https://pagepilot.ai/build/_assets/features-02-ZMUSN3WX.webp");
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat; }
 
 .features-CTA {
   background-color: lavender;
