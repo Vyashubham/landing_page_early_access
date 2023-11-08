@@ -1,32 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/index.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Flow+Rounded&family=Montserrat:wght@100;200;400;500;600;700&family=Playfair+Display:ital@0;1&family=Roboto+Mono:ital,wght@0,200;0,500;1,700&display=swap"
-        rel="stylesheet">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <title>PageWiz</title>
     <link rel="shortcut icon" href="/media/logo.png" type="image/x-icon">
-
+    <link rel="stylesheet" href="/css/index.css">
+    <!-- Load only the Montserrat font weights that you are using -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com" defer></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 </head>
-
 <body>
     <nav>
         <div class="logo"></div>
+        <div class="sign-up">Signup for early access </div>
+        
     </nav>
-    <main>
-        <div class="heading">Generate a high converting product page in seconds</div>
-        <div class="sub-heading">Build high-selling landing pages for your online store in just a few minutes using AI
+    <main class="">
+        <div class="heading animate__animated animate__fadeIn">Generate a high converting product page in seconds</div>
+        <div class="sub-heading animate__animated animate__fadeIn">Build high-selling landing pages for your online store in just a few minutes using AI
         </div>
-        <div class="heading-CTA">
+        <div class="heading-CTA ">
 
             <form>
                 <div class="relative z-0 w-full mb-6 group">
@@ -45,7 +42,7 @@
 
         </div>
     </main>
-    <div class="features-container">
+    <div class="features-container animate__slideInUp">
         <div class="features-heading">Boost your revenue with a product page that actually sell </div>
         <div class="features-sub-heading">PagePilot will create the landing page for you, the marketing materials, copywriting, and choosing the best images for your product.</div>
         <div class="features"></div>
@@ -72,7 +69,26 @@
         <!-- </div> -->
         
     </div>
-    <div class="features-CTA"></div>
+    <div class="features-CTA">
+        <div class="heading">Stop guessing what's working</div>
+        <div class="sub-heading">With PagePilot you will get a high-converting landing page that is fully created, tested, and implemented by the AI.
+        </div>
+        <div class="heading-CTA">
+
+            <form>
+                <div class="relative z-0 w-full mb-6 group">
+                    <input type="email" name="floating_email" id="floating_email"
+                        class="heading-CTA-email block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                        placeholder=" " required />
+                    <label for="floating_email"
+                        class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Email
+                        address</label>
+                </div>
+                <button type="submit"
+                class="heading-CTA-button text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Sign-up for early access today!</button>
+            </form>
+        </div>
+    </div>
     <footer></footer>
 </body>
 
