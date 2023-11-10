@@ -13,33 +13,37 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 </head>
+<title>Geometric Shapes</title>
 <body>
     <nav>
         <div class="logo"></div>
-        <div class="sign-up">Signup for early access </div>
+        <div class="sign-up button">Signup for early access </div>
         
     </nav>
     <main class="">
-        <div class="heading animate__animated animate__fadeIn">Generate a high converting product page in seconds</div>
+        <div class="shape-container"></div>
+        <div class="heading animate__animated animate__fadeIn">Generate a <span class="">high converting</span> product page in seconds</div>
         <div class="sub-heading animate__animated animate__fadeIn">Build high-selling landing pages for your online store in just a few minutes using AI
         </div>
         <div class="heading-CTA ">
 
-            <form>
+            <form id="emailForm">
                 <div class="relative z-0 w-full mb-6 group">
-                    <input type="email" name="floating_email" id="floating_email"
+                    <input type="email" name="entry.2144084309" id="floating_email"
                         class="heading-CTA-email block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
                         placeholder=" " required />
                     <label for="floating_email"
                         class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Email
                         address</label>
                 </div>
-                <button type="submit"
-                class="heading-CTA-button text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Sign-up for early access today!</button>
+                <button type="submit" 
+                class="heading-CTA-button button text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Sign-up for early access today!</button>
             </form>
         </div>
        
-
+        <div id="thankYouMessage" style="display: none;">
+            Thank you for subscribing!
+          </div>
         </div>
     </main>
     <div class="features-container animate__slideInUp">
@@ -71,25 +75,66 @@
     </div>
     <div class="features-CTA">
         <div class="heading">Stop guessing what's working</div>
-        <div class="sub-heading">With PagePilot you will get a high-converting landing page that is fully created, tested, and implemented by the AI.
+        <div class="sub-heading">With PageWiz you will get a high-converting landing page that is fully created, tested, and implemented by the AI.
         </div>
-        <div class="heading-CTA">
+        <div class="heading-CTA ">
 
-            <form>
+            <form id="emailForm1">
                 <div class="relative z-0 w-full mb-6 group">
-                    <input type="email" name="floating_email" id="floating_email"
+                    <input type="email" name="entry.2144084309" id="floating_email"
                         class="heading-CTA-email block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
                         placeholder=" " required />
                     <label for="floating_email"
                         class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Email
                         address</label>
                 </div>
-                <button type="submit"
-                class="heading-CTA-button text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Sign-up for early access today!</button>
+                <button type="submit" 
+                class="heading-CTA-button button text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Sign-up for early access today!</button>
             </form>
+        </div>
+       
+        <div id="thankYouMessage1" style="display: none;">
+            Thank you for subscribing!
+          </div>
         </div>
     </div>
     <footer></footer>
+    <script>
+      document.getElementById('emailForm').addEventListener('submit', function(event) {
+        event.preventDefault(); // Prevent the default form submission
+    
+        var formData = new FormData(this);
+        fetch('https://docs.google.com/forms/d/e/1FAIpQLSfkffdkgSzGaQrNl6W1cnYpx8GsfX-s6aq9yL3ha1f4gTo_mA/formResponse', {
+          method: 'POST',
+          mode: 'no-cors', // CORS must be 'no-cors' for Google Forms which doesn't support CORS
+          body: formData,
+        }).then(() => {
+          document.getElementById('emailForm').style.display = 'none'; // Hide the form
+          document.getElementById('thankYouMessage').style.display = 'block'; // Show thank you message
+        }).catch(error => {
+          console.error('Error!', error.message);
+          // Handle the error here if you'd like to notify the user that something went wrong
+        });
+      });
+
+        document.getElementById('emailForm1').addEventListener('submit', function(event) {
+        event.preventDefault(); // Prevent the default form submission
+    
+        var formData1 = new FormData(this);
+        fetch('https://docs.google.com/forms/d/e/1FAIpQLSfkffdkgSzGaQrNl6W1cnYpx8GsfX-s6aq9yL3ha1f4gTo_mA/formResponse', {
+          method: 'POST',
+          mode: 'no-cors', // CORS must be 'no-cors' for Google Forms which doesn't support CORS
+          body: formData1,
+        }).then(() => {
+          document.getElementById('emailForm1').style.display = 'none'; // Hide the form
+          document.getElementById('thankYouMessage1').style.display = 'block'; // Show thank you message
+        }).catch(error => {
+          console.error('Error!', error.message);
+          // Handle the error here if you'd like to notify the user that something went wrong
+        });
+      });
+    </script>
+    
 </body>
 
 </html>
