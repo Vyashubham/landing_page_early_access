@@ -23,7 +23,9 @@ nav {
   background-size: cover; }
 
 .sign-up {
-  height: 70%;
+  background-color: honeydew;
+  height: auto;
+  max-height: 70%;
   width: 30vh;
   background-color: #2563EB;
   display: flex;
@@ -33,7 +35,8 @@ nav {
   font-weight: 550; }
 
 main {
-  height: 70vh;
+  height: auto;
+  min-height: 70vh;
   width: 90vw;
   margin: 0 auto;
   display: flex;
@@ -47,10 +50,17 @@ main {
   100% {
     background-position: 100% 50%; } }
 .heading {
+  font-size: 2rem;
   display: block;
   font-size: 4rem;
   line-height: 4.5rem;
   text-align: center; }
+  @media screen and (min-width: 480px) {
+    .heading {
+      font-size: calc(2rem + 2rem * ((100vw - 480px) / (544px))); } }
+  @media screen and (min-width: 1024px) {
+    .heading {
+      font-size: 4rem; } }
 
 .text-highlight {
   color: #2563EB; }
@@ -65,7 +75,8 @@ main {
   color: #6b6b6b; }
 
 .heading-CTA {
-  height: 30vh;
+  height: auto;
+  min-height: 30vh;
   display: block;
   display: flex;
   padding-top: 8vh; }
@@ -169,7 +180,8 @@ li::after {
 
 .features-CTA {
   background-color: #1D243C;
-  height: 50vh;
+  height: auto;
+  min-height: 55vh;
   width: 80vw;
   margin: 0 auto;
   margin-top: 15vh;
@@ -199,5 +211,51 @@ footer {
   background-color: #1458eb;
   transition: .2s ease-in;
   cursor: pointer; }
+
+@media screen and (max-width: 480px) {
+  .sign-up {
+    width: 30vw !important;
+    font-size: 1rem;
+    text-align: center; }
+
+  main {
+    padding-left: 2vw;
+    height: auto; }
+
+  .heading {
+    padding-top: 5vh;
+    line-height: 3.5rem;
+    font-size: 3rem;
+    text-align: left; }
+
+  .sub-heading {
+    width: 100%;
+    text-align: left;
+    font-size: 2rem;
+    line-height: 2.5rem; }
+
+  .heading-CTA {
+    width: 100vw; }
+
+  .heading-CTA > form {
+    width: 50vw !important; }
+
+  .heading-CTA-button {
+    background-color: pink; }
+
+  .features-container {
+    height: auto; }
+
+  nav, main, footer {
+    width: 100vw; }
+
+  .sign-up, .heading-CTA > form, .features-container {
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%; }
+
+  .sign-up, .heading-CTA-button {
+    width: auto;
+    margin: 1em auto; } }
 
 /*# sourceMappingURL=index.css.map */

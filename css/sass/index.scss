@@ -5,32 +5,35 @@ $primary-color: #fff;
 $secondary-color: rgb(107, 107, 107);
 $pop-color: #2563EB;
 
+// Responsive breakpoints
+$breakpoint-mobile: 480px;
+$breakpoint-tablet: 768px;
+$breakpoint-desktop: 1024px;
 
-body{
+// Mixin for responsive font-size
+@mixin responsive-font-size($min, $max) {
+  font-size: $min;
+  @media screen and (min-width: $breakpoint-mobile) {
+    font-size: calc(#{$min} + #{($max - $min)} * ((100vw - #{$breakpoint-mobile}) / (#{($breakpoint-desktop - $breakpoint-mobile)})));
+  }
+  @media screen and (min-width: $breakpoint-desktop) {
+    font-size: $max;
+  }
+}
+
+// Base styles
+body {
     background-color: $bg-color;
-
     margin: 0;
     padding: 0;
-
     font-family: Montserrat;
     color: $primary-color;
-
-//     background: linear-gradient(270deg, #140723, #040720);
-//   background-size: 800% 800%;
-  
-//   // Animate gradient background
-//   animation: fluidAnimation 2s ease;
-  
-//   margin: 0;
-//   padding: 0;
-//   font-family: Montserrat;
-//   color: $primary-color;
-
 }
 
 nav{
     // background-color: yellow;
 
+    // height: auto;
     height: 10vh;
     width: 90vw; 
     margin: 0 auto;
@@ -53,9 +56,10 @@ nav{
 }
 
 .sign-up{
-    // background-color: honeydew;
+    background-color: honeydew;
 
-    height: 70%;
+    height: auto;
+    max-height: 70%;
     width: 30vh;
     background-color: $pop-color;
 
@@ -70,7 +74,8 @@ nav{
 main{
     // background-color: orange;
 
-    height: 70vh;
+    height: auto;
+    min-height: 70vh;
     width: 90vw;
     margin: 0 auto;
 
@@ -93,7 +98,7 @@ main{
 
 .heading{
     // background-color: brown;
-
+    @include responsive-font-size(2rem, 4rem); // Example usage of the mixin
     display: block;
 
     font-size: 4rem;
@@ -120,8 +125,8 @@ main{
 
 .heading-CTA{
     // background-color: antiquewhite;
-
-    height: 30vh;
+    height: auto;
+    min-height: 30vh;
     display: block;
     display: flex;
     padding-top: 8vh;
@@ -283,7 +288,8 @@ li {
  .features-CTA{
     background-color: #1D243C;
 
-    height: 50vh;
+    height: auto;
+    min-height: 55vh;
     width: 80vw;
     margin: 0 auto;
     margin-top: 15vh ;
@@ -293,14 +299,18 @@ li {
     flex-direction: column;
     color: #fff;
     border-radius: 2rem;
+
+    // font-size: clamp(1rem, 5rem, 5rem) !important;
  }
 
  .features-CTA > .heading {
+    // font-size: clamp(1rem, 2fr, 3rem) !important;
     font-weight: 600;
     padding: 1vh;
  }
 
  .features-CTA > .sub-heading {
+    // font-size: clamp(1rem, 2rem, 2rem) !important;
     width: 70%;
     text-align: center;
 
@@ -323,4 +333,82 @@ li {
     transition: .2s ease-in;
 
     cursor: pointer;
+}
+
+// Make other elements responsive
+@media screen and (max-width: $breakpoint-mobile) {
+    body{
+        // margin-left: 2vw;
+    }
+    nav{
+        // background-color: red;
+        // justify-content: space-between !important;
+        
+
+    }
+
+    .sign-up{
+        width: 30vw !important;
+        font-size: 1rem;
+        text-align: center;
+    }
+    main{
+        padding-left: 2vw;
+        // background-color: blue;
+        height: auto;
+    }
+   .heading{
+    padding-top: 5vh;
+    line-height: 3.5rem;
+    font-size: 3rem;
+    text-align: left;
+   }
+
+   .sub-heading{
+    width: 100%;
+    text-align: left;
+    font-size: 2rem;
+    line-height: 2.5rem;
+   }
+
+   .heading-CTA{
+    width: 100vw;
+   }
+   .heading-CTA > form{
+    
+    width: 50vw !important;
+    
+    
+}
+
+
+.heading-CTA-email{
+    // border: 1rem solid white;
+}
+.heading-CTA-button{
+    background-color: pink;
+    // min-width: 15vw !important;
+    // border-radius: 0 !important;
+    // border: 1rem solid white;
+
+}
+
+.features-container{
+    height: auto;
+}
+
+    nav, main, footer {
+        width: 100vw; // Take full width on smaller screens
+    }
+
+    .sign-up, .heading-CTA > form, .features-container {
+        flex-direction: column; // Stack elements vertically on smaller screens
+        align-items: stretch;
+        width: 100%;
+    }
+
+    .sign-up, .heading-CTA-button {
+        width: auto; // Adjust width for buttons
+        margin: 1em auto; // Center buttons
+    }
 }
