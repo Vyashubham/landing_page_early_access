@@ -3,6 +3,8 @@
 $bg-color: #101116;
 $primary-color: #fff;
 $secondary-color: rgb(107, 107, 107);
+$pop-color: #2563EB;
+
 
 body{
     background-color: $bg-color;
@@ -12,6 +14,17 @@ body{
 
     font-family: Montserrat;
     color: $primary-color;
+
+//     background: linear-gradient(270deg, #140723, #040720);
+//   background-size: 800% 800%;
+  
+//   // Animate gradient background
+//   animation: fluidAnimation 2s ease;
+  
+//   margin: 0;
+//   padding: 0;
+//   font-family: Montserrat;
+//   color: $primary-color;
 
 }
 
@@ -44,7 +57,7 @@ nav{
 
     height: 70%;
     width: 30vh;
-    background-color: #fa891fe0;
+    background-color: $pop-color;
 
     display: flex;
     justify-content: center;
@@ -69,6 +82,15 @@ main{
 
 }
 
+@keyframes gradientAnimation {
+    10% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 100% 50%;
+    }
+  }
+
 .heading{
     // background-color: brown;
 
@@ -76,9 +98,13 @@ main{
 
     font-size: 4rem;
     line-height: 4.5rem;
+    text-align: center;
 
 }
 
+.text-highlight{
+    color: $pop-color;
+}
 .sub-heading{
     // background-color: blue;
 
@@ -255,10 +281,10 @@ li {
 
 
  .features-CTA{
-    // background-color: lavender;
+    background-color: #1D243C;
 
     height: 50vh;
-    width: 90vw;
+    width: 80vw;
     margin: 0 auto;
     margin-top: 15vh ;
     display: flex;
@@ -266,6 +292,7 @@ li {
     align-items: center;
     flex-direction: column;
     color: #fff;
+    border-radius: 2rem;
  }
 
  .features-CTA > .heading {
@@ -279,11 +306,21 @@ li {
 
 
  }
+
+.heading-CTA{
+    // background-color: red;
+    height: auto;
+}
+
  footer{
     height: 10vh;
     width: 90vw;
  }
 
   
+.button:hover{
+    background-color: #1458eb;
+    transition: .2s ease-in;
 
-  
+    cursor: pointer;
+}

@@ -25,7 +25,7 @@ nav {
 .sign-up {
   height: 70%;
   width: 30vh;
-  background-color: #fa891fe0;
+  background-color: #2563EB;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -41,10 +41,19 @@ main {
   justify-content: center;
   flex-direction: column; }
 
+@keyframes gradientAnimation {
+  10% {
+    background-position: 100% 50%; }
+  100% {
+    background-position: 100% 50%; } }
 .heading {
   display: block;
   font-size: 4rem;
-  line-height: 4.5rem; }
+  line-height: 4.5rem;
+  text-align: center; }
+
+.text-highlight {
+  color: #2563EB; }
 
 .sub-heading {
   display: block;
@@ -159,15 +168,17 @@ li::after {
   background-repeat: no-repeat; }
 
 .features-CTA {
+  background-color: #1D243C;
   height: 50vh;
-  width: 90vw;
+  width: 80vw;
   margin: 0 auto;
   margin-top: 15vh;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  color: #fff; }
+  color: #fff;
+  border-radius: 2rem; }
 
 .features-CTA > .heading {
   font-weight: 600;
@@ -177,8 +188,16 @@ li::after {
   width: 70%;
   text-align: center; }
 
+.heading-CTA {
+  height: auto; }
+
 footer {
   height: 10vh;
   width: 90vw; }
+
+.button:hover {
+  background-color: #1458eb;
+  transition: .2s ease-in;
+  cursor: pointer; }
 
 /*# sourceMappingURL=index.css.map */
