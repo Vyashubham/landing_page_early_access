@@ -208,7 +208,17 @@ li::after {
 
 footer {
   height: 10vh;
-  width: 90vw; }
+  margin: 20vh auto;
+  width: 80vw;
+  border-top: .1rem solid white;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  padding: 2rem;
+  line-height: 2rem; }
+
+.footer-mail {
+  border-bottom: .15rem solid white; }
 
 .button:hover {
   border: 0.25rem solid #2563EB;

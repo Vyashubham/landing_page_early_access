@@ -337,8 +337,22 @@ li {
 }
 
  footer{
+    // background-color: lightblue;
     height: 10vh;
-    width: 90vw;
+    margin: 20vh auto;
+    width: 80vw;
+    // margin-top: 20vh;
+    border-top: .1rem solid white;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding: 2rem;
+    line-height: 2rem;
+ }
+
+ .footer-mail {
+    // background-color: yellow;
+    border-bottom: .15rem solid white;
  }
 
   
