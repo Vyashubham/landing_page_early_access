@@ -23,11 +23,10 @@ nav {
   background-size: cover; }
 
 .sign-up {
-  background-color: honeydew;
   height: auto;
-  max-height: 70%;
-  width: 30vh;
-  background-color: #2563EB;
+  height: 80%;
+  width: 25vh;
+  border: .1rem solid #fff;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -36,7 +35,7 @@ nav {
 
 main {
   height: auto;
-  min-height: 70vh;
+  min-height: 90vh;
   width: 90vw;
   margin: 0 auto;
   display: flex;
@@ -54,7 +53,9 @@ main {
   display: block;
   font-size: 4rem;
   line-height: 4.5rem;
-  text-align: center; }
+  text-align: center;
+  font-weight: bold;
+  /* Makes the text bold */ }
   @media screen and (min-width: 480px) {
     .heading {
       font-size: calc(2rem + 2rem * ((100vw - 480px) / (544px))); } }
@@ -208,7 +209,8 @@ footer {
   width: 90vw; }
 
 .button:hover {
-  background-color: #1458eb;
+  border: 0.1rem solid #2563EB;
+  background-color: #2563EB;
   transition: .2s ease-in;
   cursor: pointer; }
 

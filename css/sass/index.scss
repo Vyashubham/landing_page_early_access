@@ -56,12 +56,15 @@ nav{
 }
 
 .sign-up{
-    background-color: honeydew;
+    // background-color: honeydew;
 
     height: auto;
-    max-height: 70%;
-    width: 30vh;
-    background-color: $pop-color;
+    // max-height: 90%;
+    // height: 8vh;
+    height: 80%;
+    width: 25vh;
+    // background-color: $pop-color;
+    border: .1rem solid #fff;
 
     display: flex;
     justify-content: center;
@@ -75,7 +78,7 @@ main{
     // background-color: orange;
 
     height: auto;
-    min-height: 70vh;
+    min-height: 90vh;
     width: 90vw;
     margin: 0 auto;
 
@@ -104,6 +107,9 @@ main{
     font-size: 4rem;
     line-height: 4.5rem;
     text-align: center;
+   
+    font-weight: bold; /* Makes the text bold */
+
 
 }
 
@@ -329,7 +335,8 @@ li {
 
   
 .button:hover{
-    background-color: #1458eb;
+    border: .1rem solid $pop-color;
+    background-color: $pop-color;
     transition: .2s ease-in;
 
     cursor: pointer;
