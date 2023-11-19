@@ -4,7 +4,7 @@ $bg-color: #101116;
 $primary-color: #fff;
 $secondary-color: rgb(107, 107, 107);
 $pop-color: #2563EB;
-
+$card-color: #1F2937;
 // Responsive breakpoints
 $breakpoint-mobile: 480px;
 $breakpoint-tablet: 768px;
@@ -174,8 +174,8 @@ main{
 .features-container{
     // background-color: greenyellow;
 
-    height: 110vh;
-    width: 90vw;
+    height: 85vh;
+    width: 80vw;
     margin: 0 auto;
 
     display: grid;
@@ -209,6 +209,7 @@ main{
     align-items: center;
     color: $secondary-color;
     font-size: 1.5rem;
+    text-align: center;
  }
 .feature-list { 
     // background-color: aqua;
@@ -216,10 +217,11 @@ main{
 
     padding-left: 5vw;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: flex-start;
     flex-direction: column;
     gap: 2vh;
+    margin-top: 13%;
  }
 
 .main-hook{
@@ -256,10 +258,14 @@ main{
 }
 
 li {
+    // background-color: $card-color;
+    margin: 1rem 0;
+    // padding: 1rem;
+    // border-radius: .5rem;
     padding-left: var(--icon-space);
     // font-size: 1.1rem;
     line-height: 3vh !important;
-    letter-spacing: .15rem;
+    // letter-spacing: .15rem;
     font-family: Montserrat;
 
   }
@@ -282,7 +288,9 @@ li {
 .feature-image { 
     // background-color: bisque;
     grid-area: 3 / 3 / 5 / 5;
-
+    // display: flex;
+    // align-items: center;
+    // justify-content: flex-start;
     background-image: url("https://pagepilot.ai/build/_assets/features-02-ZMUSN3WX.webp");
     background-position: center;
     background-size: contain;
@@ -292,7 +300,7 @@ li {
 
 
  .features-CTA{
-    background-color: #1D243C;
+    background-color: $card-color;
 
     height: auto;
     min-height: 55vh;

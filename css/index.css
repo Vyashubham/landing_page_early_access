@@ -99,8 +99,8 @@ main {
   border-radius: 0 !important; }
 
 .features-container {
-  height: 110vh;
-  width: 90vw;
+  height: 85vh;
+  width: 80vw;
   margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -123,16 +123,18 @@ main {
   justify-content: center;
   align-items: center;
   color: #6b6b6b;
-  font-size: 1.5rem; }
+  font-size: 1.5rem;
+  text-align: center; }
 
 .feature-list {
   grid-area: 3 / 1 / 5 / 3;
   padding-left: 5vw;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: flex-start;
   flex-direction: column;
-  gap: 2vh; }
+  gap: 2vh;
+  margin-top: 13%; }
 
 .main-hook {
   width: 70%;
@@ -155,9 +157,9 @@ main {
   padding: 0; }
 
 li {
+  margin: 1rem 0;
   padding-left: var(--icon-space);
   line-height: 3vh !important;
-  letter-spacing: .15rem;
   font-family: Montserrat; }
 
 li:before {
@@ -180,7 +182,7 @@ li::after {
   background-repeat: no-repeat; }
 
 .features-CTA {
-  background-color: #1D243C;
+  background-color: #1F2937;
   height: auto;
   min-height: 55vh;
   width: 80vw;
