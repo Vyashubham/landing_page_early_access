@@ -62,7 +62,7 @@ nav{
     // max-height: 90%;
     // height: 8vh;
     height: 80%;
-    width: 25vh;
+    width: 30vh;
     // background-color: $pop-color;
     border: .1rem solid #fff;
 
@@ -104,7 +104,7 @@ main{
     @include responsive-font-size(2rem, 4rem); // Example usage of the mixin
     display: block;
 
-    font-size: 4rem;
+    font-size: 3.8rem !important;
     line-height: 4.5rem;
     text-align: center;
    
@@ -335,8 +335,8 @@ li {
 
   
 .button:hover{
-    border: .1rem solid $pop-color;
-    background-color: $pop-color;
+    border: .25rem solid $pop-color;
+    background-color: $pop-color !important;
     transition: .2s ease-in;
 
     cursor: pointer;

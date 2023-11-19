@@ -25,7 +25,7 @@ nav {
 .sign-up {
   height: auto;
   height: 80%;
-  width: 25vh;
+  width: 30vh;
   border: .1rem solid #fff;
   display: flex;
   justify-content: center;
@@ -51,7 +51,7 @@ main {
 .heading {
   font-size: 2rem;
   display: block;
-  font-size: 4rem;
+  font-size: 3.8rem !important;
   line-height: 4.5rem;
   text-align: center;
   font-weight: bold;
@@ -209,8 +209,8 @@ footer {
   width: 90vw; }
 
 .button:hover {
-  border: 0.1rem solid #2563EB;
-  background-color: #2563EB;
+  border: 0.25rem solid #2563EB;
+  background-color: #2563EB !important;
   transition: .2s ease-in;
   cursor: pointer; }
 
