@@ -301,12 +301,12 @@ li {
 
  .features-CTA{
     background-color: $card-color;
-
+    
     height: auto;
-    min-height: 55vh;
+    height: 75vh;
     width: 80vw;
     margin: 0 auto;
-    margin-top: 15vh ;
+    margin-top: 25vh ;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -318,24 +318,45 @@ li {
  }
 
  .features-CTA > .heading {
+    // background-color: pink;
     // font-size: clamp(1rem, 2fr, 3rem) !important;
     font-weight: 600;
     padding: 1vh;
+    height: 10vh !important;
+
  }
 
  .features-CTA > .sub-heading {
+    // background-color: lightblue;
     // font-size: clamp(1rem, 2rem, 2rem) !important;
     width: 70%;
+    height: 15vh;
     text-align: center;
 
 
  }
 
+.feature-cta-signup > form{
+    // background-color: red;
+    width: 40vw;
+}
+.feature-cta-signup{
+    // background-color: lightgreen;
+    // height: 1vh;
+    // margin: 0;
+    // padding: 0;
+    // width: 1vw;
+ }
+
 .heading-CTA{
     // background-color: red;
-    height: auto;
+    height: 10vh;
 }
 
+.no-shadow{
+    // background-color: peru !important;
+    box-shadow: none !important;
+}
  footer{
     // background-color: lightblue;
     height: 10vh;

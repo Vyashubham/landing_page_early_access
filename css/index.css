@@ -184,10 +184,10 @@ li::after {
 .features-CTA {
   background-color: #1F2937;
   height: auto;
-  min-height: 55vh;
+  height: 75vh;
   width: 80vw;
   margin: 0 auto;
-  margin-top: 15vh;
+  margin-top: 25vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -197,14 +197,22 @@ li::after {
 
 .features-CTA > .heading {
   font-weight: 600;
-  padding: 1vh; }
+  padding: 1vh;
+  height: 10vh !important; }
 
 .features-CTA > .sub-heading {
   width: 70%;
+  height: 15vh;
   text-align: center; }
 
+.feature-cta-signup > form {
+  width: 40vw; }
+
 .heading-CTA {
-  height: auto; }
+  height: 10vh; }
+
+.no-shadow {
+  box-shadow: none !important; }
 
 footer {
   height: 10vh;
