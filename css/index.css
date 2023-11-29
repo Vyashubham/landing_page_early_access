@@ -1,283 +1,47 @@
-body {
-  background-color: #101116;
-  margin: 0;
-  padding: 0;
-  font-family: Montserrat;
-  color: #fff; }
+/*
+Error: Invalid CSS after "... 0%, 0%, 0.09);": expected "}", was ""
+        on line 532 of ./css/sass/index.scss
 
-nav {
-  height: 10vh;
-  width: 90vw;
-  margin: 0 auto;
-  margin-top: 3vh;
-  display: flex;
-  justify-content: space-between;
-  align-items: center; }
+527:           /* shadow ring 👇 *\/
+528:           0 0 0 1px hsla(0, 0%, 0%, 0.05),
+529:           /* multiple soft shadows 👇 *\/
+530:           0 0.3px 0.4px hsla(0, 0%, 0%, 0.02),
+531:           0 0.9px 1.5px hsla(0, 0%, 0%, 0.045),
+532:           0 3.5px 6px hsla(0, 0%, 0%, 0.09);
 
-.logo {
-  height: 100%;
-  width: 10vh;
-  background-image: url("/media/logo.png");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover; }
-
-.sign-up {
-  height: auto;
-  height: 80%;
-  width: 30vh;
-  border: .1rem solid #fff;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 1.2rem;
-  font-weight: 550; }
-
-main {
-  height: auto;
-  min-height: 90vh;
-  width: 90vw;
-  margin: 0 auto;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column; }
-
-@keyframes gradientAnimation {
-  10% {
-    background-position: 100% 50%; }
-  100% {
-    background-position: 100% 50%; } }
-.heading {
-  font-size: 2rem;
-  display: block;
-  font-size: 3.8rem !important;
-  line-height: 4.5rem;
-  text-align: center;
-  font-weight: bold;
-  /* Makes the text bold */ }
-  @media screen and (min-width: 480px) {
-    .heading {
-      font-size: calc(2rem + 2rem * ((100vw - 480px) / (544px))); } }
-  @media screen and (min-width: 1024px) {
-    .heading {
-      font-size: 4rem; } }
-
-.text-highlight {
-  color: #2563EB; }
-
-.sub-heading {
-  display: block;
-  width: 70%;
-  text-align: center;
-  font-size: 2.5rem;
-  line-height: 3rem;
-  margin-top: 1.5vh;
-  color: #6b6b6b; }
-
-.heading-CTA {
-  height: auto;
-  min-height: 30vh;
-  display: block;
-  display: flex;
-  padding-top: 8vh; }
-
-.heading-CTA > form {
-  width: 45vw;
-  padding: 0;
-  margin: 0;
-  height: 10vh;
-  display: flex;
-  align-items: baseline;
-  gap: 1vw; }
-
-.heading-CTA-email {
-  border: 1rem solid white; }
-
-.heading-CTA-button {
-  min-width: 15vw !important;
-  border-radius: 0 !important; }
-
-.features-container {
-  height: 85vh;
-  width: 80vw;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(2, 0.15fr) repeat(2, 1fr);
-  grid-column-gap: 0px;
-  grid-row-gap: 0px;
-  color: #fff; }
-
-.features-heading {
-  grid-area: 1 / 1 / 2 / 5;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 2.5rem;
-  font-weight: 500; }
-
-.features-sub-heading {
-  grid-area: 2 / 1 / 3 / 5;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: #6b6b6b;
-  font-size: 1.5rem;
-  text-align: center; }
-
-.feature-list {
-  grid-area: 3 / 1 / 5 / 3;
-  padding-left: 5vw;
-  display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
-  flex-direction: column;
-  gap: 2vh;
-  margin-top: 13%; }
-
-.main-hook {
-  width: 70%;
-  font-size: 2rem;
-  font-weight: 700; }
-
-.sub-hook {
-  width: 70%;
-  font-size: 1.5rem;
-  color: #6b6b6b; }
-
-.one-liner {
-  width: 70%;
-  font-size: 1.5rem;
-  font-family: Montserrat; }
-
-.pain-point-list > ul {
-  --icon-space: 1.3em;
-  list-style: none;
-  padding: 0; }
-
-li {
-  margin: 1rem 0;
-  padding-left: var(--icon-space);
-  line-height: 3vh !important;
-  font-family: Montserrat; }
-
-li:before {
-  content: "\f00c";
-  /* FontAwesome Unicode */
-  font-family: FontAwesome;
-  display: inline-block;
-  margin-left: calc( var(--icon-space) * -1 );
-  width: var(--icon-space);
-  color: green; }
-
-li::after {
-  font-family: Montserrat; }
-
-.feature-image {
-  grid-area: 3 / 3 / 5 / 5;
-  background-image: url("https://pagepilot.ai/build/_assets/features-02-ZMUSN3WX.webp");
-  background-position: center;
-  background-size: contain;
-  background-repeat: no-repeat; }
-
-.features-CTA {
-  background-color: #1F2937;
-  height: auto;
-  height: 75vh;
-  width: 80vw;
-  margin: 0 auto;
-  margin-top: 25vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  color: #fff;
-  border-radius: 2rem; }
-
-.features-CTA > .heading {
-  font-weight: 600;
-  padding: 1vh;
-  height: 10vh !important; }
-
-.features-CTA > .sub-heading {
-  width: 70%;
-  height: 15vh;
-  text-align: center; }
-
-.feature-cta-signup > form {
-  width: 40vw; }
-
-.heading-CTA {
-  height: 10vh; }
-
-.no-shadow {
-  box-shadow: none !important; }
-
-footer {
-  height: 10vh;
-  margin: 20vh auto;
-  width: 80vw;
-  border-top: .1rem solid white;
-  display: flex;
-  justify-content: center;
-  text-align: center;
-  padding: 2rem;
-  line-height: 2rem; }
-
-.footer-mail {
-  border-bottom: .15rem solid white; }
-
-.button:hover {
-  border: 0.25rem solid #2563EB;
-  background-color: #2563EB !important;
-  transition: .2s ease-in;
-  cursor: pointer; }
-
-@media screen and (max-width: 480px) {
-  .sign-up {
-    width: 30vw !important;
-    font-size: 1rem;
-    text-align: center; }
-
-  main {
-    padding-left: 2vw;
-    height: auto; }
-
-  .heading {
-    padding-top: 5vh;
-    line-height: 3.5rem;
-    font-size: 3rem;
-    text-align: left; }
-
-  .sub-heading {
-    width: 100%;
-    text-align: left;
-    font-size: 2rem;
-    line-height: 2.5rem; }
-
-  .heading-CTA {
-    width: 100vw; }
-
-  .heading-CTA > form {
-    width: 50vw !important; }
-
-  .heading-CTA-button {
-    background-color: pink; }
-
-  .features-container {
-    height: auto; }
-
-  nav, main, footer {
-    width: 100vw; }
-
-  .sign-up, .heading-CTA > form, .features-container {
-    flex-direction: column;
-    align-items: stretch;
-    width: 100%; }
-
-  .sign-up, .heading-CTA-button {
-    width: auto;
-    margin: 1em auto; } }
-
-/*# sourceMappingURL=index.css.map */
+Backtrace:
+./css/sass/index.scss:532
+/usr/share/rubygems-integration/all/gems/sass-3.7.4/lib/sass/scss/parser.rb:1308:in `expected'
+/usr/share/rubygems-integration/all/gems/sass-3.7.4/lib/sass/scss/parser.rb:1238:in `expected'
+/usr/share/rubygems-integration/all/gems/sass-3.7.4/lib/sass/scss/parser.rb:1233:in `tok!'
+/usr/share/rubygems-integration/all/gems/sass-3.7.4/lib/sass/scss/parser.rb:690:in `block'
+/usr/share/rubygems-integration/all/gems/sass-3.7.4/lib/sass/scss/parser.rb:681:in `ruleset'
+/usr/share/rubygems-integration/all/gems/sass-3.7.4/lib/sass/scss/parser.rb:707:in `block_child'
+/usr/share/rubygems-integration/all/gems/sass-3.7.4/lib/sass/scss/parser.rb:700:in `block_contents'
+/usr/share/rubygems-integration/all/gems/sass-3.7.4/lib/sass/scss/parser.rb:137:in `stylesheet'
+/usr/share/rubygems-integration/all/gems/sass-3.7.4/lib/sass/scss/parser.rb:41:in `parse'
+/usr/share/rubygems-integration/all/gems/sass-3.7.4/lib/sass/engine.rb:414:in `_to_tree'
+/usr/share/rubygems-integration/all/gems/sass-3.7.4/lib/sass/engine.rb:389:in `_render_with_sourcemap'
+/usr/share/rubygems-integration/all/gems/sass-3.7.4/lib/sass/engine.rb:307:in `render_with_sourcemap'
+/usr/share/rubygems-integration/all/gems/sass-3.7.4/lib/sass/plugin/compiler.rb:468:in `update_stylesheet'
+/usr/share/rubygems-integration/all/gems/sass-3.7.4/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
+/usr/share/rubygems-integration/all/gems/sass-3.7.4/lib/sass/plugin/compiler.rb:209:in `each'
+/usr/share/rubygems-integration/all/gems/sass-3.7.4/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
+/usr/share/rubygems-integration/all/gems/sass-3.7.4/lib/sass/plugin/compiler.rb:449:in `on_file_changed'
+/usr/share/rubygems-integration/all/gems/sass-3.7.4/lib/sass/plugin/compiler.rb:320:in `block in watch'
+/usr/share/rubygems-integration/all/gems/listen-3.7.0/lib/listen/event/config.rb:28:in `call'
+/usr/share/rubygems-integration/all/gems/listen-3.7.0/lib/listen/event/processor.rb:117:in `block in _process_changes'
+/usr/share/rubygems-integration/all/gems/listen-3.7.0/lib/listen/thread.rb:26:in `rescue_and_log'
+/usr/share/rubygems-integration/all/gems/listen-3.7.0/lib/listen/event/processor.rb:116:in `_process_changes'
+/usr/share/rubygems-integration/all/gems/listen-3.7.0/lib/listen/event/processor.rb:25:in `block in loop_for'
+/usr/share/rubygems-integration/all/gems/listen-3.7.0/lib/listen/event/processor.rb:20:in `loop'
+/usr/share/rubygems-integration/all/gems/listen-3.7.0/lib/listen/event/processor.rb:20:in `loop_for'
+/usr/share/rubygems-integration/all/gems/listen-3.7.0/lib/listen/event/loop.rb:85:in `_process_changes'
+/usr/share/rubygems-integration/all/gems/listen-3.7.0/lib/listen/event/loop.rb:51:in `block in start'
+/usr/share/rubygems-integration/all/gems/listen-3.7.0/lib/listen/thread.rb:26:in `rescue_and_log'
+/usr/share/rubygems-integration/all/gems/listen-3.7.0/lib/listen/thread.rb:18:in `block in new'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: Invalid CSS after \"... 0%, 0%, 0.09);\": expected \"}\", was \"\"\A         on line 532 of ./css/sass/index.scss\A \A 527:           /* shadow ring 👇 */\A 528:           0 0 0 1px hsla(0, 0%, 0%, 0.05),\A 529:           /* multiple soft shadows 👇 */\A 530:           0 0.3px 0.4px hsla(0, 0%, 0%, 0.02),\A 531:           0 0.9px 1.5px hsla(0, 0%, 0%, 0.045),\A 532:           0 3.5px 6px hsla(0, 0%, 0%, 0.09);"; }
